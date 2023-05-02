@@ -1121,6 +1121,31 @@ showIdAndDescriptionFromCauldronsCalledBrassicaceae(data.cauldrons.winter_seasso
 
 // 7.- Mostrar el porcentaje de cauldrons dañados separados por temporada
 
+function calculatePercentageOfDamagedCauldrons(cauldronSeasson) {
+
+    let quantity = 0;
+    for (let i = 0; i < cauldronSeasson.length; i++) {
+
+        if (cauldronSeasson[i].damaged) {
+
+            quantity++;
+        }
+    }
+    const percentageOfDamagedCauldrons = quantity / cauldronSeasson.length * 100;
+    return percentageOfDamagedCauldrons;
+}
+
+console.log("7.- Mostrar el porcentaje de cauldrons dañados separados por temporada");
+
+console.log("Autumn Seasson");
+console.log(calculatePercentageOfDamagedCauldrons(data.cauldrons.autumn_seasson));
+console.log("Spring Seasson");
+console.log(calculatePercentageOfDamagedCauldrons(data.cauldrons.spring_seasson));
+console.log("Summer Seasson");
+console.log(calculatePercentageOfDamagedCauldrons(data.cauldrons.summer_seasson));
+console.log("Winter Seasson");
+console.log(calculatePercentageOfDamagedCauldrons(data.cauldrons.winter_seasson));
+
 // 8.- Mostrar el porcentaje de cauldrons de "Plexiglass" en "winter_seasson"
 
 // 9.- Mostrar el número de cauldrons de color "Orange" en buen estado
