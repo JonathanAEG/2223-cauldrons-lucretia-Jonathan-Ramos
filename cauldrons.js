@@ -1190,3 +1190,40 @@ console.log(OrangeAndNotDamagedCauldronQuantity);
 
 // 10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.
 
+function showCauldronColorList() {
+
+    const colorList = [];
+
+    insertColorsIntoArrayWithoutRepeating(data.cauldrons.autumn_seasson, colorList);
+    insertColorsIntoArrayWithoutRepeating(data.cauldrons.spring_seasson, colorList);
+    insertColorsIntoArrayWithoutRepeating(data.cauldrons.summer_seasson, colorList);
+    insertColorsIntoArrayWithoutRepeating(data.cauldrons.winter_seasson, colorList);
+
+    console.log("10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.");
+    console.log(colorList);
+}
+
+function insertColorsIntoArrayWithoutRepeating(cauldronSeasson, colorList) {
+
+    for (let i = 0; i < cauldronSeasson.length; i++) {
+
+        if (!checkIfColorIsRepeated(colorList, cauldronSeasson[i].color)) {
+
+            colorList.push(cauldronSeasson[i].color);
+        }
+    }
+}
+
+function checkIfColorIsRepeated(colorList, color) {
+
+    for (let i = 0; i < colorList.length; i++) {
+
+        if (colorList[i] === color) {
+
+            return true;
+        }
+    }
+    return false;
+}
+
+showCauldronColorList();
