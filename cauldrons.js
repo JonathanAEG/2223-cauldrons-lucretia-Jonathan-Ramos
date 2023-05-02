@@ -1035,7 +1035,29 @@ console.log(data.cauldrons.summer_seasson.length);
 
 // 3.- Mostrar los Cauldrons rotos separados por temporada
 
+function showBrokenCauldrons(cauldronSeasson) {
+
+    for (let i = 0; i < cauldronSeasson.length; i++) {
+
+        if (cauldronSeasson[i].damaged) {
+
+            console.log(cauldronSeasson[i]);
+        }
+    }
+}
+
+console.log("Autumn Seasson")
+showBrokenCauldrons(data.cauldrons.autumn_seasson);
+console.log("Spring Seasson")
+showBrokenCauldrons(data.cauldrons.spring_seasson);
+console.log("Summer Seasson")
+showBrokenCauldrons(data.cauldrons.summer_seasson);
+console.log("Winter Seasson")
+showBrokenCauldrons(data.cauldrons.winter_seasson);
+
 // 4.- Mostrar el color de los cauldron con magic_description "Naproxen"
+
+
 
 // 5.- Mostrar el total de cauldrons de madera "wood" rotos, suma de todas las temporadas
 
