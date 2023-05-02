@@ -1033,27 +1033,30 @@ console.log(data.cauldrons.spring_seasson.length);
 console.log("Summer Seasson");
 console.log(data.cauldrons.summer_seasson.length);
 
-// 3.- Mostrar los Cauldrons rotos separados por temporada
+// 3.- Mostrar la cantidad Cauldrons rotos separados por temporada
 
 function showBrokenCauldrons(cauldronSeasson) {
 
+    let quantity = 0;
     for (let i = 0; i < cauldronSeasson.length; i++) {
 
         if (cauldronSeasson[i].damaged) {
 
-            console.log(cauldronSeasson[i]);
+            quantity++;
         }
     }
+    return quantity;
 }
 
-console.log("Autumn Seasson")
-showBrokenCauldrons(data.cauldrons.autumn_seasson);
-console.log("Spring Seasson")
-showBrokenCauldrons(data.cauldrons.spring_seasson);
-console.log("Summer Seasson")
-showBrokenCauldrons(data.cauldrons.summer_seasson);
-console.log("Winter Seasson")
-showBrokenCauldrons(data.cauldrons.winter_seasson);
+console.log("3.- Mostrar la cantidad Cauldrons rotos separados por temporada");
+console.log("Autumn Seasson");
+console.log(showBrokenCauldrons(data.cauldrons.autumn_seasson));
+console.log("Spring Seasson");
+console.log(showBrokenCauldrons(data.cauldrons.spring_seasson));
+console.log("Summer Seasson");
+console.log(showBrokenCauldrons(data.cauldrons.summer_seasson));
+console.log("Winter Seasson");
+console.log(showBrokenCauldrons(data.cauldrons.winter_seasson));
 
 // 4.- Mostrar el color de los cauldron con magic_description "Naproxen"
 
