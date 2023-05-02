@@ -1151,6 +1151,23 @@ console.log(calculatePercentageOfDamagedCauldrons(data.cauldrons.winter_seasson)
 
 // 8.- Mostrar el porcentaje de cauldrons de "Plexiglass" en "winter_seasson"
 
+function calculatePercentageOfCauldronsOfPlexigllass(cauldronSeasson) {
+
+    let quantity = 0;
+    for (let i = 0; i < cauldronSeasson.length; i++) {
+
+        if (cauldronSeasson[i].type == "Plexiglass") {
+
+            quantity++;
+        }
+    }
+    const percentageOfPlexiglassCauldrons = quantity / cauldronSeasson.length * 100;
+    return percentageOfPlexiglassCauldrons;
+}
+
+console.log("8.- Mostrar el porcentaje de cauldrons de Plexiglass en winter_seasson");
+console.log(calculatePercentageOfCauldronsOfPlexigllass(data.cauldrons.winter_seasson));
+
 // 9.- Mostrar el número de cauldrons de color "Orange" en buen estado
 
 // 10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.
