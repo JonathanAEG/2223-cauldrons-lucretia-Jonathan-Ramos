@@ -1099,6 +1099,26 @@ console.log(woodBrokenCauldronQ);
 
 // 6.- Mostrar la Id y magic_description de los cauldron llamados "Brassicaceae"
 
+function showIdAndDescriptionFromCauldronsCalledBrassicaceae(cauldronSeasson) {
+
+    let quantity = 0;
+    for (let i = 0; i < cauldronSeasson.length; i++) {
+
+        if (cauldronSeasson[i].name == "Brassicaceae") {
+
+            console.log("///////////////////////////")
+            console.log(cauldronSeasson[i].id);
+            console.log(cauldronSeasson[i].magic_description);
+        }
+    }
+}
+
+console.log("6.- Mostrar la Id y magic_description de los cauldron llamados Brassicaceae")
+showIdAndDescriptionFromCauldronsCalledBrassicaceae(data.cauldrons.autumn_seasson);
+showIdAndDescriptionFromCauldronsCalledBrassicaceae(data.cauldrons.spring_seasson);
+showIdAndDescriptionFromCauldronsCalledBrassicaceae(data.cauldrons.summer_seasson);
+showIdAndDescriptionFromCauldronsCalledBrassicaceae(data.cauldrons.winter_seasson);
+
 // 7.- Mostrar el porcentaje de cauldrons dañados separados por temporada
 
 // 8.- Mostrar el porcentaje de cauldrons de "Plexiglass" en "winter_seasson"
