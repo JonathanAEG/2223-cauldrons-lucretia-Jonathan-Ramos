@@ -1079,6 +1079,24 @@ showCauldronColorIfNaproxen(data.cauldrons.winter_seasson);
 
 // 5.- Mostrar el total de cauldrons de madera "wood" rotos, suma de todas las temporadas
 
+function countWoodBrokenCauldrons(cauldronSeasson) {
+
+    let quantity = 0;
+    for (let i = 0; i < cauldronSeasson.length; i++) {
+
+        if (cauldronSeasson[i].type == "wood" && cauldronSeasson[i].damaged) {
+
+            quantity++;
+        }
+    }
+    return quantity;
+}
+
+const woodBrokenCauldronQ = countWoodBrokenCauldrons(data.cauldrons.autumn_seasson) + countWoodBrokenCauldrons(data.cauldrons.spring_seasson) + countWoodBrokenCauldrons(data.cauldrons.summer_seasson) + countWoodBrokenCauldrons(data.cauldrons.winter_seasson);
+
+console.log("5.- Mostrar el total de cauldrons de madera wood rotos, suma de todas las temporadas");
+console.log(woodBrokenCauldronQ);
+
 // 6.- Mostrar la Id y magic_description de los cauldron llamados "Brassicaceae"
 
 // 7.- Mostrar el porcentaje de cauldrons dañados separados por temporada
