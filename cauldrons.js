@@ -1170,5 +1170,23 @@ console.log(calculatePercentageOfCauldronsOfPlexigllass(data.cauldrons.winter_se
 
 // 9.- Mostrar el número de cauldrons de color "Orange" en buen estado
 
+function countOrangeAndNotDamagedCauldrons(cauldronSeasson) {
+
+    let quantity = 0;
+    for (let i = 0; i < cauldronSeasson.length; i++) {
+
+        if (cauldronSeasson[i].color == "Orange" && !cauldronSeasson[i].damaged) {
+
+            quantity++;
+        }
+    }
+    return quantity;
+}
+
+const OrangeAndNotDamagedCauldronQuantity = countOrangeAndNotDamagedCauldrons(data.cauldrons.autumn_seasson) + countOrangeAndNotDamagedCauldrons(data.cauldrons.spring_seasson) + countOrangeAndNotDamagedCauldrons(data.cauldrons.summer_seasson) + countOrangeAndNotDamagedCauldrons(data.cauldrons.winter_seasson);
+
+console.log("9.- Mostrar el número de cauldrons de color Orange en buen estado")
+console.log(OrangeAndNotDamagedCauldronQuantity);
+
 // 10.- Mostrar el listado de posibles colores de cauldrons, sin repetir color.
 
