@@ -1020,7 +1020,18 @@ console.log("1.- Mostrar la cantidad total de cauldrons");
 console.log(totalCauldronQ);
 console.log("");
 
-// 2- Mostrar la cantidad de cauldrons separados por temporada
+// 2.- Mostrar la cantidad de cauldrons separados por temporada
+
+console.log("2.- Mostrar la cantidad de cauldrons separados por temporada");
+
+console.log("Autumn Seasson");
+console.log(data.cauldrons.autumn_seasson.length);
+console.log("Winter Seasson");
+console.log(data.cauldrons.winter_seasson.length);
+console.log("Spring Seasson");
+console.log(data.cauldrons.spring_seasson.length);
+console.log("Summer Seasson");
+console.log(data.cauldrons.summer_seasson.length);
 
 // 3.- Mostrar los Cauldrons rotos separados por temporada
 
